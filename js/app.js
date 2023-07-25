@@ -311,7 +311,7 @@ addProductBlock.addEventListener('click', function (e) {
 
   // }
   listingDisplay.src = `images/AddProduct_${imgIndex}.png`;
-  projectInfo.innerText = AddProductInfo[imgIndex - 1];
+  projectInfo.innerText = addProductInfo[imgIndex - 1];
   popup_link.href = 'https://bazeproducts.000webhostapp.com/index.php';
   popUp.style.display = 'block';
 
