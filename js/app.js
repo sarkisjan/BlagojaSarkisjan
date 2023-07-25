@@ -97,7 +97,7 @@ mySql_logo.addEventListener('mouseover', function () {
 });
 mySql_logo.addEventListener('mouseleave', function () {
 
-  mySql_logo.src = 'images/Planet_mySQL.png';
+  mySql_logo.src = 'images/Planet_MySQL.png';
 });
 
 sun.addEventListener('click', function () {
