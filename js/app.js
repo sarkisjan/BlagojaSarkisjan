@@ -310,8 +310,8 @@ addProductBlock.addEventListener('click', function (e) {
   //   addProduct.classList.add('pop');
 
   // }
-  listingDisplay.src = `images/addProduct_${imgIndex}.png`;
-  projectInfo.innerText = addProductInfo[imgIndex - 1];
+  listingDisplay.src = `images/AddProduct_${imgIndex}.png`;
+  projectInfo.innerText = AddProductInfo[imgIndex - 1];
   popup_link.href = 'https://bazeproducts.000webhostapp.com/index.php';
   popUp.style.display = 'block';
 
@@ -325,7 +325,7 @@ addProductBlock.addEventListener('click', function (e) {
       nextBtn.style.display = 'none';
     }
     backBtn.style.display = 'block';
-    listingDisplay.src = `images/addProduct_${imgIndex}.png`;
+    listingDisplay.src = `images/AddProduct_${imgIndex}.png`;
     projectInfo.innerText = addProductInfo[imgIndex - 1];
 
   })
@@ -336,7 +336,7 @@ addProductBlock.addEventListener('click', function (e) {
       backBtn.style.display = 'none';
     }
     nextBtn.style.display = 'block';
-    listingDisplay.src = `images/addProduct_${imgIndex}.png`;
+    listingDisplay.src = `images/AddProduct_${imgIndex}.png`;
     projectInfo.innerText = addProductInfo[imgIndex - 1];
   })
 
