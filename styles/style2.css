@@ -937,7 +937,9 @@ figure {
         transform: translate(-50%, -50%);
         font-size: 30px;
     }
-
+    section h2 {
+            font-size: 30px;
+    }
     .bio p {
         padding: 7px;
         font-size: 13px;
