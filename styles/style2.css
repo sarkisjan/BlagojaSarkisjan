@@ -1001,11 +1001,12 @@ figure {
         left: -8vw;
         top: -28vw;
     }
-}
-.form-panel .formTitle, .form-panel h3 {
+    .form-panel .formTitle, .form-panel h3 {
     
     text-align: center;
 }
+}
+
 .thanks {
     width: 100vw;
     height: 100vh;
