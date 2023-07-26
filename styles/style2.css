@@ -931,7 +931,7 @@ figure {
 
     section .about {
         /* width: 100%; */
-        width: 360px;
+        width: 320px;
         left: 50%;
         top: 75%;
         transform: translate(-50%, -50%);
