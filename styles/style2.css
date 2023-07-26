@@ -1002,7 +1002,10 @@ figure {
         top: -28vw;
     }
 }
-
+.formTitle {
+    
+    text-align: center;
+}
 .thanks {
     width: 100vw;
     height: 100vh;
