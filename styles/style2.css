@@ -103,6 +103,7 @@ section:nth-child(2n) {
 }
 
 section .about {
+    font-family: 'Orbitron', sans-serif;
     width: 420px;
     color: rgb(201, 201, 201);
     position: absolute;
@@ -172,7 +173,7 @@ section .about {
 }
 
 section h2 {
-
+    font-family: 'Orbitron', sans-serif;
     font-size: 35px;
     text-align: center;
     text-transform: uppercase;
@@ -206,6 +207,7 @@ section .cards {
 }
 
 section .cards .logo-planet h3 {
+    font-family: 'Orbitron', sans-serif;
     font: 30px;
     text-align: center;
     text-transform: uppercase;
@@ -243,6 +245,7 @@ section .cards .logo-planet h3 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    font-family: 'Orbitron', sans-serif;
     font-size: 35px;
     text-align: center;
     text-transform: uppercase;
@@ -415,6 +418,7 @@ section .cards .logo-planet h3 {
 
 
 .formTitle {
+    font-family: 'Orbitron', sans-serif;
     text-align: left;
 }
 
@@ -466,7 +470,7 @@ textarea {
 }
 
 .send .btn {
-
+    font-family: 'Orbitron', sans-serif;
     width: 150px;
     margin-top: 2vh;
     border-radius: 25px;
