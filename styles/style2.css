@@ -147,7 +147,7 @@ section .about {
 
 }
 
-.bio p {
+.bio .content {
     box-shadow: 0px 0px 5px 1px white;
     padding: 20px 10px;
 }
