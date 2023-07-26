@@ -474,8 +474,8 @@ textarea {
     width: 150px;
     margin-top: 2vh;
     border-radius: 25px;
-    background: linear-gradient(rgb(201, 201, 201), white);
-    transition: 2.5s;
+    background: linear-gradient(white, rgb(201, 201, 201));
+    transition: 1.5s;
 
 }
 
