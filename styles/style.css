@@ -265,7 +265,7 @@ canvas {
   }
 }
 
-@media(max-width:850px) {
+@media(max-width:950px) {
   #particles-js {
     background-size: 50%;
     background-position: 50% 20%;
