@@ -355,6 +355,141 @@ closeView.addEventListener('click', function () {
   document.getElementById('projects').scrollIntoView();
   location.reload(true);
 });
+
+// ---------form validation-------------
+
+class ContactValidator {
+  constructor(name, lastName, email, msg) {
+    this.name = name;
+    this.lastName = lastName;
+    this.email = email;
+    this.msg = msg;
+    this.errors = {};
+  }
+
+
+
+  validateName() {
+
+    let val = this.name;
+    const nameRegex = /^[a-zA-Z ]{3,12}$/;
+    if (val === '') {
+      this.addError('name', ': name cannot be empty');
+
+    }
+    else {
+      if (!nameRegex.test(val)) {
+        this.addError('name', ': name must be 3-12 chars');
+      }
+    }
+
+  }
+  validateLastName() {
+
+    let val = this.lastName;
+    const lastNameRegex = /^[a-zA-Z ]{3,12}$/;
+    if (val === '') {
+      this.addError('lastName', ': Last Name cannot be empty');
+    }
+    else {
+      if (!lastNameRegex.test(val)) {
+        this.addError('lastName', ': last Name must be 3-12 chars');
+      }
+    }
+
+  }
+
+  validateEmail() {
+
+    let val = this.email;
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if (val === '') {
+      this.addError('email', ': email cannot be empty');
+    }
+    else {
+      if (!emailRegex.test(val)) {
+        this.addError('email', ': email must be a valid email address');
+      }
+    }
+
+  }
+  validateMsg() {
+
+    let val = this.msg;
+    const msgRegex = /^[a-zA-Z0-9!?@#$&()-_`.+,%/\''"][^<>]{12,500}$/;
+    if (val === '') {
+      this.addError('msg', ': message cannot be empty');
+    }
+    else {
+      if (!msgRegex.test(val)) {
+        this.addError('msg', ': message must be 12-500 chars & alphanumeric');
+      }
+    }
+
+  }
+  validateForm() {
+    // const fields = ['name', 'lastName', 'email', 'msg'];
+
+    this.validateName();
+    this.validateLastName();
+    this.validateEmail();
+    this.validateMsg();
+    return this.errors;
+
+  }
+  addError(key, val) {
+    this.errors[key] = val;
+  }
+
+}
+
+const inputs = document.querySelectorAll('.input');
+const sendMail = document.querySelector('[type="submit"]');
+
+
+sendMail.addEventListener('click', function (e) {
+  e.preventDefault();
+  const fields = ['name', 'lastName', 'email', 'msg'];
+
+  const errBox = {
+    name: document.querySelector('.nameError'),
+    lastName: document.querySelector('.lastNameError'),
+    email: document.querySelector('.emailError'),
+    msg: document.querySelector('.msgError')
+  }
+
+  let name = document.querySelector('#name').value;
+
+  let lastName = document.querySelector('#lastName').value;
+
+  let email = document.querySelector('#email').value;
+
+  let msg = document.querySelector('#msg').value;
+
+  const Contact = new ContactValidator(name, lastName, email, msg);
+  let errors = Contact.validateForm();
+  for (let field of fields) {
+    if (errors[field]) {
+      errBox[field].innerText = errors[field];
+      errBox[field].style.color = 'red';
+
+    } else {
+      errBox[field].innerText = '';
+    }
+    // console.log(errors);
+
+  }
+  if (Object.keys(errors).length === 0) {
+    window.location.href = "thanks.html";
+  }
+})
+
+
+
+
+
+// ------------------------------------------------
 // -----------------------------------------------
 
 /* -----------------------------------------------
