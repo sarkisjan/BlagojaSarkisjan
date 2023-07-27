@@ -197,22 +197,30 @@
                     <form id="form" action="https://formsubmit.co/baze_sarkisjan@yahoo.com" method="POST">
                         <div class="formFields">
                             <div class="formSender">
+                                <div class="inputBox">
+                                    <input class="input" type="text" id="name" name="name" placeholder="" required
+                                        oninvalid="this.setCustomValidity('Please enter your name')"
+                                        oninput="setCustomValidity('')">
+                                    <label id="nameLabel" class="floatLabel" for="name">Name <span
+                                            class="nameError"></span>
+                                    </label>
+                                </div>
+                                <div class="inputBox">
+                                    <input class="input" type="text" id="lastName" name="lastName" placeholder=""
+                                        required oninvalid="this.setCustomValidity('Please enter your last name')"
+                                        oninput="setCustomValidity('')">
+                                    <label id="lastNameLabel" class="floatLabel" for="lastName">Last Name <span
+                                            class="lastNameError"></span> </label>
+                                </div>
+                                <div class="inputBox">
+                                    <input class="input" type="email" id="email" name="email" placeholder="" required
+                                        oninvalid="this.setCustomValidity('Please enter Email')"
+                                        oninput="setCustomValidity('')">
+                                    <label id="emailLabel" class="floatLabel" for="email">Email <span
+                                            class="emailError"></span></label>
+                                </div>
 
-                                <input type="text" id="name" name="name" placeholder="Name" required
-                                    oninvalid="this.setCustomValidity('Please enter your name')"
-                                    oninput="setCustomValidity('')">
-
-                                <input type="text" id="lastName" name="lastName" placeholder="Last name" required
-                                    oninvalid="this.setCustomValidity('Please enter your last name')"
-                                    oninput="setCustomValidity('')">
-
-                                <input type="email" id="email" name="email" placeholder="Email" required
-                                    oninvalid="this.setCustomValidity('Please enter Email')"
-                                    oninput="setCustomValidity('')">
-
-                                <input type="text" id="company" name="company" placeholder="Company website">
-
-                                <input type="hidden" name="_next" value="https://sarkisjan.github.io/BlagojaSarkisjan/thanks.html">
+                                <input type="hidden" name="_next" value="thanks.html">
 
                                 <input type="hidden" name="_subject" value="New Contact">
 
@@ -220,8 +228,13 @@
 
 
                             <div class="formMsg">
-                                <textarea name="msg" id="msg" cols="30" rows="10"
-                                    placeholder="Type Your Message Here"></textarea>
+                                <div class="inputBox">
+                                    <textarea class="input" name="msg" id="msg" cols="30" rows="10" placeholder=""
+                                        required></textarea>
+                                    <label id="msgLabel" class="floatLabel" for="msg">Type Your Message Here <span
+                                            class="msgError"></span> </label>
+                                </div>
+
                             </div>
 
                         </div>
