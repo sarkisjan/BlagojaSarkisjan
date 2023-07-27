@@ -446,16 +446,7 @@ section .cards .logo-planet h3 {
     justify-content: space-between;
 }
 
-/* #form input,
-textarea {
-    border: none;
-    border-bottom: 1px solid black;
-    /* margin: 1vh; */
-}
 
-#form input {
-    height: 30px;
-} */
 /* ------- floating labels---- */
 .inputBox {
     margin-bottom: 15px;
