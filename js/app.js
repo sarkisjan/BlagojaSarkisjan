@@ -1,15 +1,4 @@
 
-// .bioTitle:hover~.bio {
-//   background-color: #2613d453;
-//   transform: translateY(0px);
-// }
-
-// bioTitle.addEventListener('click', function () {
-//   bio.style.transform = 'translateY(0px)';
-// })
-// -------------------------------------------------
-
-
 
 const html_logo = document.querySelector('.html_logo');
 const css_logo = document.querySelector('.css_logo');
@@ -146,6 +135,49 @@ for (let navItem of navItems) {
   })
 };
 
+// ---------------- ABOUT, TITLE LETTERS EFFECT --------------
+const words = document.querySelectorAll('.word');
+words.forEach((word) => {
+  let letters = word.textContent.split('');
+  word.textContent = '';
+  letters.forEach((letter) => {
+    let span = document.createElement('span');
+    span.textContent = letter;
+    span.className = 'letter';
+    word.append(span);
+  });
+});
+
+let currentWordIndex = 0;
+let maxWordIndex = words.length - 1;
+words[currentWordIndex].style.opacity = '1';
+
+let changeText = () => {
+  let currentWord = words[currentWordIndex];
+  let nextWord = currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
+
+  Array.from(currentWord.children).forEach((letter, i) => {
+
+    setTimeout(() => {
+      letter.className = 'letter out';
+    }, i * 80);
+  });
+  nextWord.style.opacity = '1';
+  Array.from(nextWord.children).forEach((letter, i) => {
+    letter.className = 'letter behind';
+    setTimeout(() => {
+      letter.className = 'letter in';
+    }, 340 + i * 80);
+  });
+  currentWordIndex = currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
+}
+
+changeText();
+setInterval(changeText, 3000);
+
+
+// -------------------------------------------------------------
+
 
 // --------------------PPROJECTS/GALLERY FUNCTIONS--------------
 // const imageContainer = document.querySelector('.image-container');
@@ -188,7 +220,7 @@ const addProductInfo = [
   'By clicking on the add product button takes you to the next page. Here you can choose what type of product you want to enter and new fields for entering specifications are added, different for each type of product. The SKU field does not allow entering products with the same SKU by verifying with the database'
 ]
 // ---------------------------------------------------------------
-// listingDisplay.src = '';
+
 
 
 
@@ -207,26 +239,21 @@ backBtn.style.display = 'none';
 // ----- link za UNKA: images/Unka_1.png----
 
 unkaBlock.addEventListener('click', function (e) {
-  // imageContainer.classList.remove('reveal');
-  // imageContainer.classList.remove('active');
+
   imgIndex = 1;
 
-  // for (let unka of unkas) {
-
-  //   unka.classList.add('pop');
-
-  // }
   listingDisplay.src = `images/Unka_${imgIndex}.png`;
   projectInfo.innerText = unkaInfo[imgIndex - 1];
   popup_link.href = '';
   popUp.style.display = 'block';
-  // popUp.style.opacity = '1';
+
 
 
   // ----------listing images in opened box--------------------
 
   nextBtn.addEventListener('click', function (e) {
     imgIndex++;
+    console.log(imgIndex);
     if (imgIndex >= unkas.length) {
       nextBtn.style.display = 'none';
     }
@@ -239,7 +266,7 @@ unkaBlock.addEventListener('click', function (e) {
 
   backBtn.addEventListener('click', function () {
     imgIndex--;
-
+    console.log(imgIndex);
     if (imgIndex <= 1) {
       backBtn.style.display = 'none';
     }
@@ -259,11 +286,6 @@ ticTacToeBlock.addEventListener('click', function (e) {
 
   imgIndex = 1;
 
-  // for (let ticTacToe of ticTacToes) {
-
-  //   ticTacToe.classList.add('pop');
-
-  // }
   listingDisplay.src = `images/ticTacToe_${imgIndex}.png`;
   projectInfo.innerText = ticTacToeInfo[imgIndex - 1];
   popup_link.href = 'http://bazestictactoe.atwebpages.com/';
@@ -275,6 +297,7 @@ ticTacToeBlock.addEventListener('click', function (e) {
 
   nextBtn.addEventListener('click', function (e) {
     imgIndex++;
+    console.log(imgIndex);
     if (imgIndex >= ticTacToes.length) {
       nextBtn.style.display = 'none';
     }
@@ -287,7 +310,7 @@ ticTacToeBlock.addEventListener('click', function (e) {
 
   backBtn.addEventListener('click', function () {
     imgIndex--;
-
+    console.log(imgIndex);
     if (imgIndex <= 1) {
       backBtn.style.display = 'none';
     }
@@ -304,12 +327,7 @@ ticTacToeBlock.addEventListener('click', function (e) {
 
 addProductBlock.addEventListener('click', function (e) {
   imgIndex = 1;
-
-  // for (let addProduct of addProducts) {
-
-  //   addProduct.classList.add('pop');
-
-  // }
+  console.log(imgIndex);
   listingDisplay.src = `images/AddProduct_${imgIndex}.png`;
   projectInfo.innerText = addProductInfo[imgIndex - 1];
   popup_link.href = 'https://bazeproducts.000webhostapp.com/index.php';
@@ -321,6 +339,7 @@ addProductBlock.addEventListener('click', function (e) {
 
   nextBtn.addEventListener('click', function (e) {
     imgIndex++;
+    console.log(imgIndex);
     if (imgIndex >= addProducts.length) {
       nextBtn.style.display = 'none';
     }
@@ -332,6 +351,7 @@ addProductBlock.addEventListener('click', function (e) {
 
   backBtn.addEventListener('click', function () {
     imgIndex--;
+    console.log(imgIndex);
     if (imgIndex <= 1) {
       backBtn.style.display = 'none';
     }
@@ -345,15 +365,11 @@ addProductBlock.addEventListener('click', function (e) {
 // ----closing open image box-----
 const closeView = document.querySelector('.popup-img span');
 closeView.addEventListener('click', function () {
-  // for (let addProduct of addProducts) {
-
-  //   addProduct.classList.remove('pop');
-
-  // }
   popUp.style.display = 'none';
   listingDisplay.src = '';
-  document.getElementById('projects').scrollIntoView();
-  location.reload(true);
+
+  location.reload(false);
+  document.querySelector('.projects').scrollIntoView();
 });
 
 // ---------form validation-------------
@@ -429,7 +445,6 @@ class ContactValidator {
 
   }
   validateForm() {
-    // const fields = ['name', 'lastName', 'email', 'msg'];
 
     this.validateName();
     this.validateLastName();
@@ -443,8 +458,6 @@ class ContactValidator {
   }
 
 }
-
-
 // ---------------ignoring required fields messages--------------
 document.addEventListener('invalid', (function () {
   const inputs = document.querySelectorAll('.input');
@@ -456,8 +469,11 @@ document.addEventListener('invalid', (function () {
   };
 })(), true);
 
+
 // ------------------------------------------------------------
-// ----------------sending contact form---------------------------
+
+// -----------------sending form--------------------------------
+
 const sendMail = document.querySelector('[type="submit"]');
 
 
@@ -490,7 +506,7 @@ sendMail.addEventListener('click', function (e) {
     } else {
       errBox[field].innerText = '';
     }
-    // console.log(errors);
+
 
   }
   if (Object.keys(errors).length === 0) {
