@@ -462,7 +462,7 @@ const sendMail = document.querySelector('[type="submit"]');
 
 
 sendMail.addEventListener('click', function (e) {
-  e.preventDefault();
+  // e.preventDefault();
   const fields = ['name', 'lastName', 'email', 'msg'];
 
   const errBox = {
