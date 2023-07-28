@@ -444,7 +444,20 @@ class ContactValidator {
 
 }
 
-const inputs = document.querySelectorAll('.input');
+
+// ---------------ignoring required fields messages--------------
+document.addEventListener('invalid', (function () {
+  const inputs = document.querySelectorAll('.input');
+  return function (e) {
+    e.preventDefault();
+    for (let input of inputs) {
+      input.focus();
+    }
+  };
+})(), true);
+
+// ------------------------------------------------------------
+// ----------------sending contact form---------------------------
 const sendMail = document.querySelector('[type="submit"]');
 
 
