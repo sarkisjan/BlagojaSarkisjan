@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="styles/style2.css">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="images/bs_black.svg">
+    <link rel="icon" href="images/bs_logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -57,15 +57,20 @@
             <div class="about">
                 <div class="bioTitle">
                     <h1>Blagoja Sarkisjan</h1>
-                    <h2>Web Developer</h2>
+                    <h2 class="changingWord">
+                        <span class="word">Web&nbsp;Developer</span>
+                        <span class="word">Frontend&nbsp;Developer</span>
+                        <span class="word">System&nbsp;Engineer</span>
+                    </h2>
                 </div>
 
                 <div class="bioBlock">
                     <div class="bio">
                         <div class="content">
-                        <p>Graduated electrical engineer at Faculty of Electrical Engineering and Information Technologies - Skopje, Macedonia</p>
-                        <p>Fast learner, persistent, highly focused</p>
-                        <p>My moto: "Whatever you do, do it to the best of your ability"</p>
+                            <p>Graduated electrical engineer at Faculty of Electrical Engineering and Information
+                                Technologies - Skopje, Macedonia</p>
+                            <p>Fast learner, persistent, highly focused</p>
+                            <p>My moto: "Whatever you do, do it to the best of your ability"</p>
                         </div>
                     </div>
                 </div>
@@ -112,7 +117,7 @@
             </div>
         </div>
     </section>
-    <section id="projects">
+    <section class="projects" id="projects">
         <div class="image-container">
             <div class="container">
                 <div class="heading">
@@ -199,8 +204,7 @@
                             <div class="formSender">
                                 <div class="inputBox">
                                     <input class="input" type="text" id="name" name="name" placeholder="" required
-                                        oninvalid="this.setCustomValidity('Please enter your name')"
-                                        oninput="setCustomValidity('')">
+                                        autocomplete="off">
                                     <label id="nameLabel" class="floatLabel" for="name">Name <span
                                             class="nameError"></span>
                                     </label>
@@ -219,20 +223,8 @@
                                     <label id="emailLabel" class="floatLabel" for="email">Email <span
                                             class="emailError"></span></label>
                                 </div>
-                                <!-- <div class="inputBox">
-                                    <input type="text" id="company" name="company" placeholder="">
-                                    <label class="floatLabel">Company website</label>
-                                </div> -->
 
-
-
-
-
-
-
-
-
-                                <input type="hidden" name="_next" value="https://sarkisjan.github.io/BlagojaSarkisjan/thanks.html">
+                                <input type="hidden" name="_next" value="thanks.html">
 
                                 <input type="hidden" name="_subject" value="New Contact">
 
