@@ -545,6 +545,65 @@ section .cards .logo-planet h3 {
     font-size: 2em;
 }
 
+/* ----------- footer icons --------------- */
+.contact-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+    width: 100%;
+    height: 65px;
+    gap: 60px;
+
+}
+
+.icon-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    position: relative;
+    display: flex;
+    width: 40px;
+    height: 40px;
+
+}
+
+.show_address {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+}
+
+footer i {
+    width: 40px;
+    height: 40px;
+
+}
+
+.github-icon {
+    background-image: url("../images/contact_icons/github.svg");
+    -webkit-background-size: cover;
+    /* Other styles here */
+}
+
+.linkedin-icon {
+    background-image: url("../images/contact_icons/linkedin.svg");
+    -webkit-background-size: cover;
+    /* Other styles here */
+}
+
+
+.mail-icon {
+    background-image: url("../images/contact_icons/envelope-regular.svg");
+    -webkit-background-size: cover;
+    /* Other styles here */
+}
+
+/* -------------------------------------------- */
+
 /* ----------burger btn and nav menu-------------- */
 .navLinks {
     display: flex;
