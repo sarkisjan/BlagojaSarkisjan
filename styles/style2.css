@@ -584,13 +584,13 @@ footer i {
 }
 
 .github-icon {
-    background-image: url("/images/contact_icons/github.svg");
+    background-image: url("../images/contact_icons/github.svg");
     -webkit-background-size: cover;
     /* Other styles here */
 }
 
 .linkedin-icon {
-    background-image: url("images/contact_icons/linkedin.svg");
+    background-image: url("../images/contact_icons/linkedin.svg");
     -webkit-background-size: cover;
     /* Other styles here */
 }
