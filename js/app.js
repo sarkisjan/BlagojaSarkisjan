@@ -26,7 +26,6 @@ window.addEventListener('scroll', function () {
 
 
 });
-
 // -------- revealing skill planets--------------
 
 const skills = document.querySelector('#skills');
@@ -35,7 +34,7 @@ window.addEventListener('scroll', function () {
 
   var windowheight = window.innerHeight;
   var revealtop = skills.getBoundingClientRect().top;
-  var revealpoint = 600;
+  var revealpoint = 550;
   if (revealtop < windowheight - revealpoint) {
     html_logo.classList.add('html_position');
     css_logo.classList.add('css_position');
@@ -56,7 +55,6 @@ window.addEventListener('scroll', function () {
 
 // ----------------------------------------------
 
-
 // ------------revealing sections-------------
 
 window.addEventListener('scroll', function () {
@@ -65,9 +63,11 @@ window.addEventListener('scroll', function () {
   for (let i = 0; i < reveals.length; i++) {
     var windowheight = window.innerHeight;
     var revealtop = reveals[i].getBoundingClientRect().top;
-    var revealpoint = 140;
+    var revealpoint = 70;
     if (revealtop < windowheight - revealpoint) {
       reveals[i].classList.add('active');
+
+
     }
     else {
       reveals[i].classList.remove('active');
