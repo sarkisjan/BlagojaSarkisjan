@@ -1205,6 +1205,14 @@ figure {
         text-align: center;
     }
 
+    .contact-icons {
+
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        font-size: 11px;
+    }
 
 
 }
@@ -1271,14 +1279,7 @@ figure {
         font-size: 1.2em;
     }
 
-    .contact-icons {
 
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        gap: 20px;
-        font-size: 11px;
-    }
 
     .contact-icons a,
     .contact-icons i {
