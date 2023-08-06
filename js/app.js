@@ -421,12 +421,12 @@ class ContactValidator {
     let val = this.name;
     const nameRegex = /^[a-zA-Z ]{3,12}$/;
     if (val === '') {
-      this.addError('name', ': name cannot be empty');
+      this.addError("name", ": can't be empty");
 
     }
     else {
       if (!nameRegex.test(val)) {
-        this.addError('name', ': name must be 3-12 chars');
+        this.addError("name", ": must be 3-12 chars");
       }
     }
 
@@ -434,13 +434,13 @@ class ContactValidator {
   validateLastName() {
 
     let val = this.lastName;
-    const lastNameRegex = /^[a-zA-Z ]{3,12}$/;
+    const lastNameRegex = /^[a-zA-Z ]{3,20}$/;
     if (val === '') {
-      this.addError('lastName', ': Last Name cannot be empty');
+      this.addError("lastName", ": can't be empty");
     }
     else {
       if (!lastNameRegex.test(val)) {
-        this.addError('lastName', ': last Name must be 3-12 chars');
+        this.addError("lastName", ": must be 3-20 chars");
       }
     }
 
@@ -452,11 +452,11 @@ class ContactValidator {
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (val === '') {
-      this.addError('email', ': email cannot be empty');
+      this.addError("email", ": can't be empty");
     }
     else {
       if (!emailRegex.test(val)) {
-        this.addError('email', ': email must be a valid email address');
+        this.addError("email", ": must be a valid email address");
       }
     }
 
@@ -466,11 +466,11 @@ class ContactValidator {
     let val = this.msg;
     const msgRegex = /^[a-zA-Z0-9!?@#$&()-_`.+,%/\''"][^<>]{12,500}$/;
     if (val === '') {
-      this.addError('msg', ': message cannot be empty');
+      this.addError("msg", ": message can't be empty");
     }
     else {
       if (!msgRegex.test(val)) {
-        this.addError('msg', ': message must be 12-500 chars & alphanumeric');
+        this.addError("msg", ": message must be 12-500 chars & alphanumeric");
       }
     }
 
