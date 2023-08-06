@@ -1120,6 +1120,33 @@ figure {
 
 
 @media(max-width: 500px) {
+
+    header a,
+    .nav_logo svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .menu-btn {
+        width: 45px;
+        height: 45px;
+    }
+
+    .btn-burger,
+    .btn-burger::before,
+    .btn-burger::after {
+        width: 30px;
+        height: 3px;
+    }
+
+    .btn-burger::before {
+        transform: translateY(-9px);
+    }
+
+    .btn-burger::after {
+        transform: translateY(9px);
+    }
+
     .image-block {
         width: 80vw;
     }
@@ -1219,31 +1246,6 @@ figure {
 
 @media(max-width:361px) {
 
-    header a,
-    .nav_logo svg {
-        width: 45px;
-        height: 45px;
-    }
-
-    .menu-btn {
-        width: 45px;
-        height: 45px;
-    }
-
-    .btn-burger,
-    .btn-burger::before,
-    .btn-burger::after {
-        width: 30px;
-        height: 3px;
-    }
-
-    .btn-burger::before {
-        transform: translateY(-9px);
-    }
-
-    .btn-burger::after {
-        transform: translateY(9px);
-    }
 
     section .about {
 
